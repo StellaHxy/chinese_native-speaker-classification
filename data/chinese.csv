@@ -1,0 +1,124 @@
+﻿index,sentence,谓语数目,非谓语数目,副词个数,从句个数,插入语个数,复合句,简单句,并列句,被动,连词,label
+1,"Protein structure prediction has been an important research
+problem in structural biology for over 50 years.",1,0,0,0,0,0,1,0,0,0,0
+2," Predicting the three-dimensional structure of a protein directly from its amino acid sequence has a wide range of applications in
+many fields, including drug design, protein design, etc.",1,2,1,0,0,0,1,0,0,0,0
+3,"Both experimental and computational approaches can be used to
+predict protein structure.",1,1,0,0,0,0,1,0,1,1,0
+4," The experimental approach allows
+for more accurate protein structures at the high cost of time
+and finance.",1,0,0,0,0,0,1,1,0,1,0
+5,"The computational approach can predict protein
+structure with high throughput at a low cost, so it is of
+paramount importance to improve the prediction accuracy for
+the computational approaches.",2,1,0,0,0,0,0,1,0,1,0
+6,"The recent success of deep neural networks has led to
+the widespread use of Artificial Intelligence in a variety of
+domains, including Computer Vision (CV), Natural Language
+Processing (NLP), Recommendation Systems, etc.",1,1,0,0,0,0,1,0,0,0,0
+7," Convolutional Neural Networks (CNN) were introduced to the field
+of protein structure prediction by AlphaFold [1], RaptorXContact [2].",1,0,0,0,0,0,1,0,1,0,0
+8," These CNN models achieved significant performance improvement in the Critical Assessment of Protein
+Structure Prediction (CASP) Challenge.",1,0,0,0,0,0,1,0,0,0,0
+9," It has demonstrated
+that deep neural networks can be an efficient solution to the
+challenge of protein structure prediction.",1,0,0,1,0,1,0,0,0,0,0
+10,"Meanwhile, because of the superior performance of Multihead Attention for sequence modelling [3], Transformer has
+made a huge performance improvement in the NLP/CV field
+and gradually has become the mainstream model structure,
+such as BERT [4], GPT [5], ViT [6].",2,0,1,0,1,0,1,1,0,1,0
+11,"Designing protein sequences that fold to a given three-dimensional (3D) structure
+has long been a challenging problem in computational structural biology with signifi-
+cant theoretical and practical implications.",1,1,0,1,0,1,0,0,0,1,0
+12,"In this study, we first formulated this prob-
+lem as predicting the residue type given the 3D structural environment around the
+Cα atom of a residue, which is repeated for each residue of a protein. ",1,1,1,1,1,1,0,0,1,1,0
+13,"We designed a
+nine-layer 3D deep convolutional neural network (CNN) that takes as input a gridded
+box with the atomic coordinates and types around a residue.",1,0,0,1,0,1,0,0,0,1,0
+14,"Several CNN layers
+were designed to capture structure information at different scales, such as bond
+lengths, bond angles, torsion angles, and secondary structures.",1,1,0,0,0,0,1,0,0,0,0
+15,"Trained on a very
+large number of protein structures, the method, called ProDCoNN (protein design
+with CNN), achieved state-of-the-art performance when tested on large numbers of
+test proteins and benchmark datasets",1,3,0,3,0,1,0,0,3,1,0
+16,"As “machines of life,” proteins play crucial roles in almost all cellular
+processes, such as transcription, translation, signaling, and cell cycle
+control",1,0,0,0,0,0,1,0,0,0,0
+17,"Computational protein design (CPD) is a technique by which
+proteins are computationally designed for specific structure and/or
+functions",1,0,1,1,0,1,0,0,1,1,0
+18,"Significant progress in CPD has been made in the past few
+decades1 such as enzymes design2-8 and membrane protein
+design.9,10",1,0,0,0,0,0,1,0,1,0,0
+19,There are several different sub-problems in CPD. ,1,0,0,0,0,0,1,0,0,0,0
+20,"The
+inverse protein folding (IPF) problem, which was raised in 1983 by
+Pabo,11 is the problem of finding the amino acid sequences that fold
+into a known three-dimensional (3D) structure. ",1,1,0,2,0,1,0,0,1,2,0
+21,"A team of researchers from the Botswana-Harvard HIV Reference Laboratory submitted a new SARS-CoV-2 genome sequence to GISAID on November 22, 2021 (GISAID accession. EPI_ISL_6752027).",1,0,0,0,0,0,1,0,0,0,0
+22,"The specimen was taken from a living 59-year-old male from Gaborone, Botswana using a nasopharyngeal swab and was sequenced using a Nanopore MinION device.",2,2,0,0,0,0,0,1,2,0,0
+23,"This sample’s genome contains 60 mutations from the Wuhan-derived reference genome (GenBank accession no. NC_045512.2) (1), 37 of which are in the Spike (S) protein.",1,0,0,1,0,1,0,0,0,0,0
+24,This variant was given the identifier B.1.1.529 by PANGO lineages (2).,1,0,0,0,0,0,1,0,1,0,0
+25,"On November 26, 2021, the WHO has designated B.1.1.529 as a Variant of Concern (VOC), named Omicron (3).",1,1,0,0,0,0,1,0,0,0,0
+26,"Therefore, scientists have advocated for close international monitoring to determine the need for vaccination boosters and/or redesign (4).",1,1,0,0,0,0,0,0,0,1,0
+27,"Hence, the identification of the omicron variant is not surprising.",1,0,1,0,0,0,1,0,0,0,0
+28,What is surprising is the number of mutations that the omicron variant accumulated compared to the first sequenced genome of SARS-CoV-2.,1,0,0,2,0,1,0,0,0,0,0
+29,"Different authors have warned that limited SARS-CoV-2 sampling and sequencing from positive
+cases, especially from asymptomatic and symptomatic cases that did not require hospitalization,
+would make it challenging to identify new mutations in the virus. ",1,1,1,2,1,0,0,0,0,0,0
+30,"For example, Brito et al. (5)analyzed the spatiotemporal heterogeneity in each country’s SARS-CoV-2 genomic surveillance efforts using metadata submitted to GISAID until May 30, 2021.",1,2,0,0,1,0,0,0,0,0,0
+31,"Unfortunately, most countries are not reaching.",1,0,1,0,0,0,1,0,0,0,0
+32,"These authors calculate that sequencing capacity should be at least 0.5% of cases per week when incidence is more than 100 positive cases every 100,000 people. ",1,0,0,2,0,1,0,0,0,0,0
+33,"While sampling bias can explain why we may miss new mutations and fail to identify new variants of low prevalence, the emergence of new variants is due to factors that favor the
+transmission of SARS-CoV-2, including low vaccination rates
+in some regions, especially in low and middle-income countries
+(LMICs).",1,2,1,3,1,1,0,1,0,3,0
+34,"Therefore, disparities in vaccination rates combined with sampling bias explain why scientists may continue to be surprised by the mutations in new SARS-CoV-2 variants.",1,1,1,1,0,1,0,0,0,1,0
+35,There are many questions regarding genomic epidemiology and the lessons we can learn from the COVID-19 pandemic.,1,0,0,1,0,1,0,1,0,1,0
+36,"Those questions are beyond the scope of this manuscript, and we addressed them elsewhere (6).",2,0,1,0,1,0,0,1,0,1,0
+37," While the origin and evolution of the Omicron variant are still open questions, here we focus on the potential implications of the mutations observed in this variant.",1,0,1,2,1,0,0,0,0,2,0
+38,"This seemingly hyper-mutated variant is of public health concern with unanswered questions surrounding vaccine protection (from available vaccines), the possibility of reinfection, transmissibility, and pathogenicity.",1,1,1,0,1,0,0,1,0,1,0
+39,"Regarding vaccine efficacy, we must look at the receptorbinding domain (RBD), part of the S1 subunit, of the spike protein as this is the binding site for neutralizing antibodies.",1,0,1,1,1,0,1,0,0,1,0
+40,This domain exists between positions 319 and 541 of the spike protein.,1,0,1,0,0,0,0,1,0,1,0
+41,"Omicron contains 15 mutations in the RBD, none of which are deletions or insertions.",1,0,0,1,0,1,0,0,0,0,0
+42,"In contrast, the Delta variant contains 7 mutations across the entire spike protein, only 2 of which are in the RBD.",1,0,1,1,0,1,0,0,0,0,0
+43,"Given that an experimentally-derived structure of the Omicron spike protein is not yet available, we must derive a predicted structure from its sequence in silico.",1,1,1,1,0,1,0,0,0,0,0
+44,"Then, we can
+use available neutralizing antibody structures to computationally
+model the interaction between Omicron and the paratopes
+of the antibodies, thus allowing us to compare potential
+affinity changes due to the mutations and posit their effects to
+vaccine efficacy.",1,4,1,0,0,0,0,1,0,3,0
+45,"We downloaded the reference genome of SARS-CoV-2 (WuhanHu-1, NCBI’s RefSeq accession no. NC_045512.2) as well as
+the first 100 complete genome sequences (≥29,000 bp) of each
+Variant of Concern (VOC) and Variant Being Monitored (VBM).",1,0,0,0,0,0,0,1,0,2,0
+46,"The total number of input sequences was 1,301. ",1,0,0,0,0,0,1,0,0,0,0
+47,"We aligned all of
+these complete genomes using MAFFT version 7.475 (7) with the
+“auto” option and trimmed the alignment to remove the 5′
+-UTR
+and 3′
+-UTR regions.",2,2,0,0,0,0,0,1,0,1,0
+48,"We also removed duplicated sequences or
+sequences with more than 5% of missing data, leaving us with
+1,026 sequences.",1,0,0,0,0,0,0,1,0,1,0
+49,"We annotated each of the 1,026 remaining sequences using
+the strategy described in Machado et al.",1,1,0,0,0,0,1,0,0,0,0
+50,"Once we had all the predicted spike proteins for each of the 1,026 genomes, we aligned those sequences based on their translation with the help of MAFFT using the TranslatorX pipeline (9).",1,3,0,0,0,0,0,1,0,1,0
+51,We removed duplicated sequences and sequences with more than 5% of missing data.,1,0,0,0,0,0,0,1,0,0,0
+52,"Finally, we identified the receptor binding motif on that alignment based on sequence similarity with the reference.",1,2,0,0,0,0,1,0,0,0,0
+53,We then calculated the pairwise p-distances between each pair of sequences were calculated using MEGA version 11.0.10 (10).,1,0,1,1,0,1,0,0,1,0,0
+54,This distance is the proportion (p) of nucleotide sites at which two sequences being compared are different.,1,0,0,1,0,1,0,0,0,0,0
+55,"The p-distances were calculated for the whole spike alignments (nucleotides) but also for the alignment of its receptor binding motif (RBM; position 430–522 of the spike amino acid sequence, a subset of the positions in the RBD).",1,0,0,0,0,0,1,1,0,1,0
+56,This variant nucleotide sequence for the spike protein was then translated into amino acids using the standard translation table.,1,1,0,0,0,0,1,0,1,0,0
+57,This sequence was then trimmed to only contain the RBD of the spike protein (positions 319 to 541).,1,1,1,0,0,0,1,0,1,0,0
+58,"Using the derived RBD amino acid sequence for Omicron, we used AlphaFold2 and RoseTTAFold to create a predicted 3D protein structures.",1,2,0,0,0,0,0,1,0,1,0
+59,AlphaFold2 is a neural network-based deep learning model created by Google DeepMind (11).,1,1,0,0,0,0,1,0,0,0,0
+60,The algorithm first searches for homologous sequences with existing structures to use as a scaffold on which to place the new sequence.,1,2,0,1,0,1,0,0,0,0,0
+61,RoseTTAFold is a similar neural network-based system by the Institute for Protein Design at the University of Washington (12).,1,0,0,0,0,0,1,0,0,0,0
+62,The AlphaFold2-based prediction was run with the “single sequence” mode using the predicted TM-score (PTM) method.,1,1,0,0,0,0,1,0,1,0,0
+63,We also specified that the algorithm should run an Amber relaxation procedure to repair any structural violations in the predicted model (13).,1,1,0,1,0,1,0,0,0,0,0
+64,The RoseTTAFold-based prediction was run with the “mmseqs2” mode [by ColabFold (14)].,1,0,0,0,0,0,1,0,0,0,0
+65,"Both systems each resulted in a .PDB file of the predicted RBD structure for Omicron along with metrics surrounding the multiple sequence alignment coverage, predicted aligned error (PAE), and predicted confidence (pLDDT) by position",1,1,0,0,0,0,1,0,0,1,0

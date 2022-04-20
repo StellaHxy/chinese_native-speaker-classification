@@ -1,0 +1,176 @@
+﻿index,sentence,谓语数目,非谓语数目,副词个数,从句个数,插入语个数,复合句,简单句,并列句,被动,连词,label
+1,"Language model pre-training has been shown to
+be effective for improving many natural language
+processing tasks (Dai and Le, 2015; Peters et al.,
+2018a; Radford et al., 2018; Howard and Ruder,
+2018).",1,2,0,0,0,0,1,0,1,0,1
+2,"These include sentence-level tasks such as
+natural language inference (Bowman et al., 2015;
+Williams et al., 2018) and paraphrasing (Dolan
+and Brockett, 2005), which aim to predict the relationships between sentences by analyzing them
+holistically, as well as token-level tasks such as
+named entity recognition and question answering,
+where models are required to produce fine-grained
+output at the token level (Tjong Kim Sang and
+De Meulder, 2003; Rajpurkar et al., 2016).",1,3,1,2,0,1,0,1,0,1,1
+3,There are two existing strategies for applying pre-trained language representations to down stream tasks: feature-based and fine-tuning.,1,2,0,0,0,0,1,0,0,1,1
+4,"The feature-based approach, such as ELMo (Peters
+et al., 2018a), uses task-specific architectures that
+include the pre-trained representations as additional features.",1,0,0,1,1,1,0,0,0,0,1
+5,"The fine-tuning approach, such as
+the Generative Pre-trained Transformer (OpenAI
+GPT) (Radford et al., 2018), introduces minimal
+task-specific parameters, and is trained on the
+downstream tasks by simply fine-tuning all pretrained parameters.",2,1,1,0,1,0,0,1,1,1,1
+6,"The two approaches share the
+same objective function during pre-training, where
+they use unidirectional language models to learn
+general language representations.",1,1,0,1,0,1,0,0,0,0,1
+7,"We argue that current techniques restrict the
+power of the pre-trained representations, especially for the fine-tuning approaches.",1,0,1,1,1,1,0,0,0,0,1
+8,"The major limitation is that standard language models are
+unidirectional, and this limits the choice of architectures that can be used during pre-training.",2,0,0,2,0,1,0,1,1,0,1
+9," For example, in OpenAI GPT, the authors use a left-toright architecture, where every token can only attend to previous tokens in the self-attention layers
+of the Transformer (Vaswani et al., 2017).",1,0,1,1,2,1,0,0,0,1,1
+10,"Such restrictions are sub-optimal for sentence-level tasks,
+and could be very harmful when applying finetuning based approaches to token-level tasks such
+as question answering, where it is crucial to incorporate context from both directions.",2,3,0,2,0,1,0,1,0,1,1
+11,"Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks
+in particular, have been firmly established as state of the art approaches in sequence modeling and transduction problems such as language modeling and machine translation [35, 2, 5].",1,0,1,0,1,0,0,1,1,3,1
+12,"Numerous
+efforts have since continued to push the boundaries of recurrent language models and encoder-decoder
+architectures [38, 24, 15].",1,1,0,0,0,0,1,0,0,1,1
+13,"Recurrent models typically factor computation along the symbol positions of the input and output
+sequences.",1,0,1,0,0,0,1,0,0,1,1
+14," Aligning the positions to steps in computation time, they generate a sequence of hidden
+states ht, as a function of the previous hidden state ht−1 and the input for position t.",1,1,0,0,2,0,1,0,0,1,1
+15," This inherently
+sequential nature precludes parallelization within training examples, which becomes critical at longer
+sequence lengths, as memory constraints limit batching across examples.",1,0,1,1,1,1,0,0,0,0,1
+16,"Recent work has achieved
+significant improvements in computational efficiency through factorization tricks [21] and conditional
+computation [32], while also improving model performance in case of the latter.",1,0,0,1,0,1,0,0,0,1,1
+17,"The fundamental
+constraint of sequential computation, however, remains.",1,0,0,0,1,0,1,0,0,1,1
+18,"Attention mechanisms have become an integral part of compelling sequence modeling and transduction models in various tasks, allowing modeling of dependencies without regard to their distance in the input or output sequences [2, 19]. ",1,2,0,0,0,0,1,0,0,1,1
+19," In all but a few cases [27], however, such attention mechanisms
+are used in conjunction with a recurrent network.",1,0,0,0,2,0,1,0,1,1,1
+20,"In this work we propose the Transformer, a model architecture eschewing recurrence and instead
+relying entirely on an attention mechanism to draw global dependencies between input and output.",1,3,1,0,0,1,0,0,0,2,1
+21,"There has been considerable recent progress in protein structure prediction using deep neural 
+networks to infer distance constraints from amino acid residue co-evolution​1–3​.  ",1,2,0,1,0,1,0,0,0,0,1
+22,"We investigated 
+whether the information captured by such networks is sufficiently rich to generate new folded 
+proteins with sequences unrelated to those of the naturally occuring proteins used in training the 
+models. ",1,4,1,3,0,1,0,0,1,1,1
+23,"We generated random amino acid sequences, and input them into the trRosetta 
+structure prediction network to predict starting distance maps, which as expected are quite 
+featureless.",2,1,0,1,0,1,0,1,0,1,1
+24,"We then carried out Monte Carlo sampling in amino acid sequence space, 
+optimizing the contrast (KL-divergence) between the distance distributions predicted by the 
+network and the background distribution.  ",1,3,1,0,0,0,0,1,0,1,1
+25,"Optimization from different random starting points 
+resulted in a wide range of proteins with diverse sequences and all alpha, all beta sheet, and 
+mixed alpha-beta structures. ",1,0,0,0,0,0,1,0,0,2,1
+26,"We obtained synthetic genes encoding 129 of these network 
+hallucinated sequences, expressed and purified the proteins in E coli, and found that 27 folded 
+to monomeric stable structures with circular dichroism spectra consistent with the hallucinated 
+structures.",4,1,0,1,0,1,0,1,0,2,1
+27,"Thus deep networks trained to predict native protein structures from their sequences 
+can be inverted to design new proteins, and such networks and methods should contribute, 
+alongside traditional physically based models, to the de novo design of proteins with new 
+functions.  ",2,3,0,1,1,1,0,1,2,1,1
+28,Deep learning methods have shown considerable promise in protein engineering. ,1,0,0,0,0,0,1,0,0,0,1
+29,"Networks 
+with architectures borrowed from language models have been trained on amino acid 
+sequences, and been used to generate new sequences without considering protein structure 
+explicitly ​4,5​.  ",2,1,0,1,0,1,0,1,2,0,1
+30,"Other methods have been developed to generate protein backbones without 
+consideration of sequence ​6​, and to identify amino acid sequences which either fit well onto 
+specified backbone structures ​7–9​ or are conditioned on low-dimensional fold representation ​10​; 
+models tailored to generate sequences and/or structures for specific protein families have also 
+been developed ​11–14​",2,3,0,2,0,1,0,1,4,2,1
+31,"During the implementation of space missions on study of the Solar system a large 
+amount of information on planets geophysics and their morphological properties has been 
+obtained, that could be investigated using fractal geometry.",1,0,0,1,0,1,0,0,2,1,1
+32,"The present paper describes the 
+analysis of the GDEM terrestrial digital model built from the ASTER’s   observations.  ",1,1,0,0,0,0,1,0,0,0,1
+33,"GDEM 
+is global digital elevation model and ASTER is advanced spaceborne thermal emission and 
+reflection radiometer. ",2,0,0,0,0,0,0,1,1,2,1
+34,ASTER was installed on the platform of Terra (NASA) orbiter. ,1,0,0,0,0,0,1,0,1,0,1
+35,"The fractal dimension values for the 
+terrestrial surface, which has a heterogeneous structure, are obtained. ",1,0,0,1,1,1,0,0,1,0,1
+36,"Analyzing structure and evolution of celestial bodies involves various methods for statistical 
+multiparametrical analysis ",1,0,0,0,0,0,1,0,0,1,1
+37," At the present time one of the promising directions of heterogeneous 
+natural objects’ structure, materials and their properties investigation is the fractal geometry.",1,0,0,0,0,0,1,0,0,1,1
+38,"For 
+instance, the fractal analysis of the Solar system bodies’ parameters has been conducted in the works 
+[4].",1,0,0,0,1,0,1,0,1,1,1
+39,"The 
+fractal dimensions investigations allow to study not only structure but connection between structure 
+and its formation processes as well.",1,1,1,0,0,0,1,0,0,0,1
+40,"The methods for the fractal structure recognition are used for heterogeneous surfaces’ properties 
+investigations, finding the similarity in certain parameters",1,1,0,0,0,0,1,0,1,0,1
+41,"The task of protein sequence design is central to nearly all rational protein engineering problems, and enormous effort has gone into the development of energy functions to guide design.",2,1,1,0,0,0,0,1,0,1,1
+42,"Here, we investigate the capability of a deep neural network model to automate design of sequences onto protein backbones, having learned directly from crystal structure data and without any human-specified priors.",1,2,1,0,0,0,1,0,0,1,1
+43,"The model generalizes to native topologies not seen during training, producing experimentally stable designs.",1,2,1,0,0,0,1,0,0,0,1
+44,We evaluate the generalizability of our method to a de novo TIM-barrel scaffold,1,0,0,0,0,0,1,0,0,0,1
+45,"The model produces novel sequences, and high-resolution crystal structures of two designs show excellent agreement with in silico models.",2,0,0,0,0,0,0,1,0,1,1
+46,Our findings demonstrate the tractability of an entirely learned method for protein sequence design.,1,0,1,0,0,0,1,0,0,0,1
+47,"Computational protein design has emerged as a powerful
+tool for rational protein design, enabling significant
+achievements in the engineering of therapeutics1–3,
+biosensors4–6, enzymes7,8, and more9–11.",1,1,0,0,1,0,1,0,0,0,1
+48,"Key to such successes is
+robust sequence design methods that minimize the folded-state
+energy of a pre-specified backbone conformation, which can
+either be derived from existing structures or generated de novo.",1,0,0,2,0,1,0,0,1,1,1
+49,"This difficult task12 is often described as the inverse of protein
+folding—given a protein backbone, design a sequence that folds
+into that conformation. ",1,1,1,1,1,1,0,0,0,0,1
+50," The functional design of enzymes, ligand
+binding sites, and interfaces all require fine-grained control over
+side-chain types and conformations.",1,0,0,0,0,0,0,1,0,1,1
+51,"Current approaches for
+fixed-backbone design commonly involve specifying an energy
+function and sampling sequence space to find a minimum-energy
+configuration13–15, and enormous effort has gone into the
+development of carefully modeled and parameterized energy
+functions to guide design, which continue to be iteratively
+refined16",2,3,3,1,0,1,0,1,0,0,1
+52,"With the emergence of deep learning systems and their ability to learn patterns from high-dimensional data, it is now possible to build models that learn complex functions of protein sequence and structure, including models for protein backbone generation18–20 and protein structure prediction21,22; as a result, we were curious as to whether an entirely learned method could be used to design
+protein sequences on par with energy function methods.",2,3,1,2,1,1,0,1,0,3,1
+53,"Recent experimentally validated efforts for machine learning-based
+sequence generation have focused on sequence representation
+learning without structural information, requiring fitting to data
+from experiments or from known protein families to produce
+functional designs23,24.",1,2,1,0,0,0,1,0,0,1,1
+54,"We hypothesized that by training a model
+that conditions on local backbone structure and chemical environment, the network might learn residue-level patterns that allow
+it to generalize without fine-tuning to new backbones with topologies outside of the training distribution, opening up the possibility
+for generation of de novo designed sequences with novel structures
+and functions.",2,2,0,2,0,1,0,1,0,1,1
+55,"Structure-based machine learning methods for
+design thus far have focused on mutation prediction25–30, rotamer
+repacking of native sequences31, or amino acid sequence design
+without modeling side-chain conformers32–35, with some experimental validation including circular dichroism data33 and
+fluorescence26. ",1,0,2,0,0,0,0,1,0,2,1
+56,"We sought to build a model that could generalize to
+unseen backbones with no homologous sequence data included in
+the training, as well as to validate that designs fold into target
+structures with designed side-chain conformations.",1,5,1,2,0,1,0,1,0,1,1
+57,"As such, we
+explored a method in which the neural network not only designs
+the sequence but explicitly builds rotamers and evaluates full-atom
+structural models, an approach not reported to date",1,1,1,1,1,1,0,0,0,2,1
+58,Conventional energy functions used in sequence design calculations are often composed of pairwise terms that model interatomic interactions.,1,1,1,1,0,1,0,0,1,0,1
+59,"Furthermore, most energy functions are highly sensitive to specific atom placement, and as a result, designed sequences can be convergent for a given starting backbone conformation.",2,0,2,0,1,0,0,1,0,1,1
+60,"For most native proteins, however, the existence of many structural homologs with low sequence identity suggests that there is a distribution of viable sequences that can adopt a target fold, but the discovery of these sequences given a fixed-backbone reference structure is difficult.",2,0,0,2,1,1,0,1,0,2,1
+61,"We hypothesized that a learned model could operate as a soft potential that implicitly captures backbone flexibility, producing diverse sequences for a fixed protein backbone. ",1,1,2,2,0,1,0,0,0,0,1
+62,"In this study, we explore an approach for sequence design guided only by a neural network that explicitly models side-chain conformers in a structure-based context (Fig. 1A), and we assess
+its generalization to unseen native topologies and to a de novo
+TIM-barrel protein backbone.",2,1,2,1,1,1,0,1,0,2,1
+63,"The model produces novel sequences, and the high-resolution crystal structures of two designs show excellent agreement with in silico models",2,0,0,0,0,0,0,1,0,1,1
+64,We are interested in sampling from the true distribution of n-length sequences of amino acids Y ∈ {1…20}n conditioned on a fixed protein backbone.,1,2,0,0,0,0,1,0,0,0,1
