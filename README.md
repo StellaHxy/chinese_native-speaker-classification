@@ -18,7 +18,7 @@
 对所有特征在建模时按照浮点数处理（不影响分类效果），最后可视化决策树时可以再进行取整处理。
 
 
-### 数据集分析：
+### 分析：
 
 1、从句包括非限制性定语从句、定语从句、主语从句等，从句个数越多，句子结构越复杂；
 2、插入语的存在会使句子结构更复杂、逻辑关系等信息更丰富，native speaker使用插入语的次数更多；  
@@ -41,7 +41,7 @@ In this work we propose the Transformer, a model architecture eschewing recurren
 连词：and、and  
 label：1（native speaker）  
 
-### 关于可视化结果：
+### 可视化结果：
 
 ![avatar](https://s1.328888.xyz/2022/04/20/rmJgk.png) 
 
